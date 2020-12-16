@@ -22,5 +22,15 @@ class ContactMeServiceProvider extends ServiceProvider
                 ], 'migrations');
             }
         }
+
+        if ($this->app->runningInConsole()) {
+            // Publish views
+            $this->publishes([
+                __DIR__ . '/../resources/views' => resource_path('views/vendor/blogpackage'),
+            ], 'views');
+
+            $this->loadRoutesFrom(__DIR__ . '/routes/web.php');
+            $this->loadViewsFrom(__DIR__ . '/resources/views', 'blogpackage');
+        }
     }
 }
