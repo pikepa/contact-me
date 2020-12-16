@@ -2,8 +2,8 @@
 
 namespace Pikepa\ContactMe\Models;
 
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
 use Pikepa\ContactMe\database\factories\MessageFactory;
 
 class Message extends Model
@@ -18,6 +18,7 @@ class Message extends Model
     {
         return MessageFactory::new();
     }
+
     /**
      * Format the message created date.
      */
