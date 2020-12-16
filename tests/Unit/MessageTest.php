@@ -6,7 +6,7 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Pikepa\ContactMe\Models\Message;
 use Pikepa\ContactMe\Tests\TestCase;
 
-class MessageTests extends TestCase
+class MessageTest extends TestCase
 {
     use RefreshDatabase;
 
