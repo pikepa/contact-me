@@ -2,21 +2,21 @@
 
 namespace Pikepa\ContactMe\tests\Unit;
 
+use Illuminate\Foundation\Testing\RefreshDatabase;
 use Pikepa\ContactMe\Models\Message;
 use Pikepa\ContactMe\Tests\TestCase;
-use Illuminate\Support\Facades\Session;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class MessageTests extends TestCase
 {
-    use RefreshDatabase ;
-    
+    use RefreshDatabase;
+
     /** @test */
-    function a_message_has_a_subject()
+    public function a_message_has_a_subject()
     {
         $message = Message::factory()->create(['subject' =>'Fake Subject']);
         $this->assertEquals('Fake Subject', $message->subject);
     }
+
     // /** @test */
     // public function it_has_a_path()
     // {
@@ -26,7 +26,7 @@ class MessageTests extends TestCase
     // }
     // /** @test */
     // public function it_requires_a_name()
-    // {   
+    // {
     //     $this->message(['name' => ''])->assertSessionHasErrors('name');
     // }
     // /** @test */
@@ -71,5 +71,4 @@ class MessageTests extends TestCase
     //         'content' =>  'This is the content of the email',
     //         ],$overrides);
     // }
-
 }

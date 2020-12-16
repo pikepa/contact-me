@@ -15,9 +15,9 @@ class ContactMeServiceProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole()) {
             // Export the migration
-            if (!class_exists('CreateMessagesTable')) {
+            if (! class_exists('CreateMessagesTable')) {
                 $this->publishes([
-                    __DIR__ . '/../database/migrations/create_messages_table.php.stub' => database_path('migrations/' . date('Y_m_d_His', time()) . '_create_posts_table.php'),
+                    __DIR__.'/../database/migrations/create_messages_table.php.stub' => database_path('migrations/'.date('Y_m_d_His', time()).'_create_posts_table.php'),
                     // you can add any number of migrations here
                 ], 'migrations');
             }
