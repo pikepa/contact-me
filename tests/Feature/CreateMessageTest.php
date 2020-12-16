@@ -13,7 +13,6 @@ class CreateMessageTest extends TestCase
     /** @test */
     public function guests_can_create_a_post()
     {
-        $this->withoutExceptionHandling();
         // To make sure we don't start with a Post
         $this->assertCount(0, Message::all());
 
@@ -28,8 +27,8 @@ class CreateMessageTest extends TestCase
 
         $message = Message::first();
 
-        //     $this->assertEquals('Peter Pike', $message->name);
-        //     $this->assertEquals('pikepeter@thepikes.net', $message->subject);
+             $this->assertEquals('Peter Pike', $message->name);
+             $this->assertEquals('This is a fake subject', $message->subject);
         $response->assertRedirect(route('message.show', $message));
     }
 }
