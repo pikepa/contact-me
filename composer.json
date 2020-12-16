@@ -1,0 +1,41 @@
+{
+    "name": "pikepa/contact-me",
+    "description": "This package enables a Contact Me form, registers the messages, sends an email to the person messaged.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Peter Pike",
+            "email": "pikepeter@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Pikepa\\ContactMe\\": "src",
+            "Pikepa\\ContactMe\\database\\factories\\": "database/factories"
+        }
+    },
+
+    "autoload-dev": {
+        "psr-4": {
+            "Pikepa\\ContactMe\\Tests\\": "tests"
+        }
+    },
+
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-f": "vendor/bin/phpunit --filter"
+    },
+
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Pikepa\\ContactMe\\ContactMeServiceProvider"
+            ]
+        }
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.5"
+    }
+}
