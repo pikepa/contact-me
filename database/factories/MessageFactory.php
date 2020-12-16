@@ -2,12 +2,11 @@
 
 namespace Pikepa\ContactMe\database\factories;
 
-use Pikepa\ContactMe\Models\Message;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Pikepa\ContactMe\Models\Message;
 
 class MessageFactory extends Factory
 {
-    
     protected $model = Message::class;
 
     protected static function newFactory()
@@ -18,11 +17,11 @@ class MessageFactory extends Factory
     public function definition()
     {
         return [
-             'name' => $this->faker->name,
-             'email' => $this->faker->safeEmail,
-             'group' => $this->faker->company,
-             'subject' => $this->faker->sentence,
-             'content' => $this->faker->paragraph, 
+            'name' => $this->faker->name,
+            'email' => $this->faker->safeEmail,
+            'group' => $this->faker->company,
+            'subject' => $this->faker->sentence,
+            'content' => $this->faker->paragraph,
         ];
     }
 }
