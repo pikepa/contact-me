@@ -18,11 +18,11 @@ class MessageFactory extends Factory
     public function definition()
     {
         return [
-            // 'name' => $faker->name,
-            // 'email' => $faker->unique()->safeEmail,
-            // 'group' => $faker->company,
+             'name' => $this->faker->name,
+             'email' => $this->faker->safeEmail,
+             'group' => $this->faker->company,
              'subject' => $this->faker->sentence,
-            // 'content' => $faker->paragraph, 
+             'content' => $this->faker->paragraph, 
         ];
     }
 }
