@@ -32,7 +32,7 @@ class MessageController extends Controller
             'email' => 'required|email',
             'group' => 'required',
             'subject' => 'required |min:4|max:50',
-            'content' => 'required|min:4|max:256', 
+            'content' => 'required|min:4|max:256',
         ]);
 
         $message = Message::create([
@@ -40,7 +40,7 @@ class MessageController extends Controller
             'email' => request('email'),
             'group' => request('group'),
             'subject' => request('subject'),
-            'content' => request('content'), 
+            'content' => request('content'),
         ]);
 
         return redirect(route('message.show', $message));
