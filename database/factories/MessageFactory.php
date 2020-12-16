@@ -21,7 +21,7 @@ class MessageFactory extends Factory
             // 'name' => $faker->name,
             // 'email' => $faker->unique()->safeEmail,
             // 'group' => $faker->company,
-             'subject' => "",
+             'subject' => $this->faker->sentence,
             // 'content' => $faker->paragraph, 
         ];
     }
