@@ -20,7 +20,7 @@ class MessageTest extends TestCase
     /** @test */
     public function it_has_a_path()
     {
-     //   $this->withoutExceptionHandling();
+        //   $this->withoutExceptionHandling();
         $message = Message::factory()->create();
         $this->assertEquals('/message/'.$message->id, $message->path());
     }
@@ -28,7 +28,7 @@ class MessageTest extends TestCase
     /** @test */
     public function it_requires_a_name()
     {
-        $this->post('/messages',['name' => ''])->assertSessionHasErrors('name');
+        $this->post('/messages', ['name' => ''])->assertSessionHasErrors('name');
     }
 
     /** @test */
@@ -54,5 +54,4 @@ class MessageTest extends TestCase
     {
         $this->post('/messages', ['content' => ''])->assertSessionHasErrors('content');
     }
-
 }

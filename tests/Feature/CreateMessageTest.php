@@ -27,8 +27,8 @@ class CreateMessageTest extends TestCase
 
         $message = Message::first();
 
-             $this->assertEquals('Peter Pike', $message->name);
-             $this->assertEquals('This is a fake subject', $message->subject);
+        $this->assertEquals('Peter Pike', $message->name);
+        $this->assertEquals('This is a fake subject', $message->subject);
         $response->assertRedirect(route('message.show', $message));
     }
 }
